@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+/*Importando Fonte do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*Importando Fonte Salva*/
+@font-face{
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/*Paleta de Cores
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+:root{ /*Pseudo-classe para declarar variável (Toda variável é declarada começa com --*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+
+* { /*Seletor global, que seleciona todos os elementos*/
+    margin: 0px; /*Todo o conteúdo terá margem zero*/
+    padding: 0px; /*Todo conteúdo terá padding zero*/
+}
+
+
+a.externo::after{ /*Todos os links que forem da classe externo, teão essa seta abaixo, usando o pseudo elementos*/
+    content: '\00A0\1F517'; /*seta que terão na frente de todos os links da classe externo, esse códifo foi retirado do emoji pedia*/
+}
+
+
+body{ /*corpo do site*/
+    background-color:var(--cor0); /*cor do fundo do corpo do site*/
+    font-family: var(--fonte-padrao); /*Fonte family do corpo do site*/     
+}
+
+
+header{ /*cabeçalho do site*/
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5)); /*cor do fundo do cabeçalho do site com degradê | to bottom significa degrade para baixo, e depois selecionamos a cor*/    
+    min-height: 150px; /*essa é altura mínima do cabeçalho*/
+}
+
+
+header > h1{  /*estilos do h1 do cabeçalho*/
+    font-family: var(--fonte-destaque); /*fonte do h1 do cabeçalho*/
+    font-weight: normal; /*tirando o negrito do h1 do cabeçalho */
+    font-size: 3em; /*Tamanho da fonte*/
+    color: white; /*cor da letra do cabeçalho*/
+    text-align: center; /*para centralizar o texto do h1*/
+    padding-top: 40px; /* esse padding top é para que o conteúdo do h1 não fique colado la em cima do cabeçalho*/
+    margin-bottom: 20px; /*esse é o espaço abaixo do h1, para que ele nao fique colado no parágrafo*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5); /*Sombra no texto, deslocamento horizontal, vertical, espalhamento e cor*/
+    
+    
+}
+
+
+header > p{ /*estilos do parágrafo do cabeçalho*/
+    font-family: var(--fonte-padrao); /*definindo a fonte do parágrafo*/
+    font-size: 1.2em; /*tamanho da fonte*/
+    color: white; /*cor da fonte do parágrafo do cabeçalho*/
+    text-align: center; /*para centralizar o texto do parágrafo*/
+    max-width: 500px; /*largura máxima do parágrafo, não posso usar apenas o width, pq se não ele vai quebrar na tela*/
+    margin: auto; /*como defini o max-width, sendo assim tenho que colocar um margin auto pra centralizar o bloco*/
+    padding-right: 10px; /*padding a direita pra ele dar um espaço qdo a tela diminuir e nao encostar na beirada da tela*/
+    padding-left: 10px; /*padding a esquerda pra ele dar um espaço qdo a tela diminuir e nao encostar na beirada da tela*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.555);
+    
+}
+
+
+nav{ /*estilos da caixa de navegação do menu*/
+    background-color: var(--cor5); /*cor do fundo da caixa do menu*/
+    padding: 10px; /*padding geral pra caixa do menu ficar um pouco mais gordinho*/
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.164); /*sombra na caixa do menu nav, deslocamento horizontal, vertical, espalhamento e cor*/    
+}
+
+
+nav > a{ /*configurando os links do menu*/
+    text-decoration: none; /*retirar o sublinhado dos links*/
+    color: white; /*cor das letras dos links*/
+    border-radius: 5px 5px 0px 0px; /*arredondar um pouco a borda do menu*/
+    padding: 10px; /*Separar um pouco os menus uns dos outros*/
+    font-weight: bold; /*colocar a fonte em negrito*/
+    transition-duration: .5s; /*a duração de transição do mouse de um menu pro outro*/
+}
+
+
+nav a:hover{ /*pseudo- classes pra quando passar o mouse em cima*/
+    text-decoration: underline; /*sublinhar o texte qdo o mouse passar por cima*/
+    background-color: var(--cor1); /*quando passar o mouse em cima o menu vai ficar com o fundo de outra cor*/
+    color: var(--cor5); /*quando passar o mouse em cima o menu vai ficar com a letra de outra cor*/
+}
+
+
+main{ /*estilos do main, conteúdo do site*/
+    background-color: white; /*cor do fundo do main*/
+    min-width: 300px; /*respondividade minima do main (do conteúdo). Quando tiver 300 pixels ele se adapta*/
+    max-width: 1000px; /*responsividade máxima do main (do conteúdo). Quando tiver 1000 pixels ele para de crescer*/
+    margin: auto; /*centralizar o main*/
+    padding: 20px; /*o conteudo vai desgrudar um pouco do main*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* sombra no main de zero de deslocamento horizontal e vertical, 10 pixels de espalhamento, preto*/
+    margin-bottom: 30px; /*essa margem embaixo não vai deixar o main que o conteúdo principal colar no footer que é o rodapé*/
+    border-radius: 0px 0px 10px 10px; /*arredondamento das bordas de baixo do main*/
+}
+
+
+main h1{ /*estilos do h1 do main*/
+    font-family: var(--fonte-android); /*tipo de fonte do h1*/
+    color: var(--cor5); /*cor da fonte do h1*/
+    font-size: 1.8em; /*tamanho da fonte do h1*/
+    font-weight: normal; /*tirando o negrito do h1 do main*/
+}
+
+
+main h2{ /*estilos do h2 do main*/
+    font-family: var(--fonte-android); /*tipo de fonte do h2*/
+    color: var(--cor4); /*cor do h2*/
+    font-weight: normal; /*tirando o negrito do h1*/
+    font-size: 1.3em; /*tamanho da fonte*/
+    background-image: linear-gradient(to right, var(--cor0), white); /*backgroun gradiente no h2, gradiente pra direita*/
+    padding: 0px 10px 0px 10px; /*padding de 10 pixels na direita e esquerda e de zero pixels em cima e embaixo*/
+}
+
+main p{ /*Configuração dos parágrafos*/
+    margin: 15px 0px; /*margem de 15 px em cima e embaixo e zero a direita e a esquerda*/
+    text-align: justify; /*texto do parágrafo justificado*/
+    text-indent: 30px; /*esse é o espaço para começar um parágrafo*/
+    line-height: 1.6em; /*define a altura da linha do parágrafo, o espaço vertical entre as linhas*/
+    font-size: 1em; /*tamanho da fonte*/
+    
+}
+
+
+main a{ /*configurando os links que tem dentro do main e dos parágrafos*/
+    text-decoration: none;
+    color:var(--cor5);
+    background-color: var(--cor0); /*cor de fundo nas palavras que são links*/
+    padding: 2px 6px; /*o padding por cima e por baixo de 2pixels e nas laterias de 6 pixels, pra background ficar mais gordinho*/
+    font-weight: bold;
+}
+
+main a:hover{ /*configurando os links que tem dentro do main e dos parágrafos, usando o pseudo-classes pra qdo o mouse passar por cima*/
+    text-decoration: underline; /*qdo passar o mouse em cima ele fica subinhado*/
+    color: var(--cor3);
+
+}
+
+main strong{ /*configurando as palavras que estão com strong dentro do main*/
+    color: var(--cor5); /*cor das palavras que estão em negrito*/
+    font-weight: bold; /*fonte negrito nas palavras que estao com strong*/
+    
+}
+
+
+main img{ /*mexendo nas imagens do main*/
+    width: 100%; /*A imagem vai se adaptar com a responsividade do main*/
+}
+
+
+main img.pequena{ /*mexendo na imagem com class pequena*/
+    max-width: 350px; /*A imagem vai ficar com tamanho fixo de o maximo 350px*/
+    display: block; /*para centralizar a imagem*/
+    margin: auto; /*para centralizar a imagem*/
+}
+
+
+div.video{ /*configurando estilos da div que tem o video*/
+    background-color: var(--cor5); /*cor da div*/
+    padding: 30px; /*espaçamento do video dentro da div*/
+    margin: 0px -20px 30px -20px; /*margem em cima zero, da direita e da esquuerda -20 pra dic colar no main, e 30 abaixo pra caixa desccolar da caixa de baixo*/
+    padding-bottom: 59%; /*para jogar o video pra baixo pra dentro da div*/
+    position: relative;
+    
+}
+
+
+div.video > iframe{
+    position: absolute;
+    top: 5%; 
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+aside{
+    background-color: var(--cor1); /*cor do background do aside*/
+    border-radius: 15px; /*arredondamento das bordas do aside*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /*colocando sombra na caixa aside*/
+}
+
+aside h3{ /*configurando o h3 do aside*/
+    background-color:var(--cor3); /*cor do backgroun color*/
+    padding: 10px; /*pra ele crecer um pouco*/
+    border-radius: 15px 15px 0px 0px; /*arredondamento das bordas*/
+    color: var(--cor0); /*cor da fonte*/
+    
+}
+
+aside p{/*Configuração o parágrafo do aside*/
+   padding: 10px; /*espaçamento pra não ficar colado no aside*/
+
+}
+
+aside > ul{ /*configurando os estilos para as listas*/
+    list-style-position: inside; /*colocando a bolinha de marcação da lista pro lado de dentro do aside*/
+    columns: 2; /*dividindo a lista em duas colunas*/
+    list-style-type: '\2714\00A0\00AO'; /*alterando a marcação da lista pelo check, que foi encontrado o codigo no site emojip pedia. 2714 é o codigo do check, tem que colocar o contrbarra antes pra ele funcionar, e o contrabarra 00A0 é para dar um espaço entre o checklist e lista, por isso usei dois pra dar um bom espaço. Isso nao é compatível com todo tipo de navegador, mais funciona perfeitamente no google chrome*/
+}
+
+
+footer{ /*estilos do rodapé*/
+    background-color: var(--cor5); /*cor do fundo do rodapé*/
+    color: white; /*cor da letra do rodapé*/
+    text-align: center; /*centralizando o rodape*/
+    padding: 5px 0px; /*para dar uma engordadinha nele por cima e por baixo*/
+    font-size: 0.8em; /*tamanho da letra*/
+}
+
