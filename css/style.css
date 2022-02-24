@@ -230,7 +230,7 @@ footer{ /*estilos do rodapé*/
     background-color: var(--cor5); /*cor do fundo do rodapé*/
     color: white; /*cor da letra do rodapé*/
     text-align: center; /*centralizando o rodape*/
-    padding: 5px 0px; /*para dar uma engordadinha nele por cima e por baixo*/
+    padding: 10px 0px; /*para dar uma engordadinha nele por cima e por baixo*/
     font-size: 0.8em; /*tamanho da letra*/
 }
 
