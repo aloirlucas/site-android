@@ -79,6 +79,7 @@ header > p{ /*estilos do parágrafo do cabeçalho*/
     margin: auto; /*como defini o max-width, sendo assim tenho que colocar um margin auto pra centralizar o bloco*/
     padding-right: 10px; /*padding a direita pra ele dar um espaço qdo a tela diminuir e nao encostar na beirada da tela*/
     padding-left: 10px; /*padding a esquerda pra ele dar um espaço qdo a tela diminuir e nao encostar na beirada da tela*/
+    padding-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.555);
     
 }
